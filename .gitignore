@@ -1,0 +1,30 @@
+# Build / tool artifacts
+*.o
+*.elf
+*.bin
+*.bit
+*.xsa
+*.jou
+*.log
+*.str
+
+# Vivado / Xilinx
+*.Xil/
+.Xil/
+vivado*.log
+vivado*.jou
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+project_1/
+
+# Simulation
+*.vcd
+*.fst
+obj_dir/
+
+# OS
+.DS_Store
+Thumbs.db
