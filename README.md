@@ -48,9 +48,19 @@
 
 - [x] 资料整理与仓库初始化
 - [x] C1+C3 研究计划文档
-- [ ] 7020 集成骨架（进行中）
-- [ ] 小 kernel 真实落地与实测
+- [x] 7020 集成骨架（RTL + TB + host 驱动 + Vivado 脚本）
+  - RTL 已通过 Verilator lint，4x4x4 GEMM testbench **PASSED**（`perf_cycles=58`）
+  - Host 驱动本地编译通过
+- [ ] 上板实测（bitstream + PetaLinux 部署）
 - [ ] 同板 HLS 对照实验
+
+### 快速开始
+
+```bash
+scripts/sim.sh                                  # 跑 RTL 仿真（期望 TEST PASSED）
+cd host && make CROSS=arm-linux-gnueabihf-       # 交叉编译 ARM 驱动
+vivado -mode batch -source scripts/create_project.tcl   # 建立 7020 工程
+```
 
 ## 许可
 
